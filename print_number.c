@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * _isdigit - checks if character is digit
+ * _isdigit - checks if the character is digit
  * @c: the character to check
  *
  * Return: 1 if digit, 0 otherwise
  */
+
+
 int _isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
@@ -106,8 +108,10 @@ int print_number_right_shift(char *str, params_t *params)
  *
  * Return: chars printed
  */
+
 int print_number_left_shift(char *str, params_t *params)
 {
+
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
 	char pad_char = ' ';
 
@@ -127,4 +131,5 @@ int print_number_left_shift(char *str, params_t *params)
 	while (i++ < params->width)
 		n += _putchar(pad_char);
 	return (n);
+
 }

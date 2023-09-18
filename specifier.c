@@ -1,11 +1,14 @@
 #include "main.h"
 
+
 /**
  * get_specifier - finds the format func
  * @s: the format string
  *
  * Return: the number of bytes printed
  */
+
+
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
@@ -46,6 +49,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
  *
  * Return: the number of bytes printed
  */
+
 int get_print_func(char *s, va_list ap, params_t *params)
 {
 	int (*f)(va_list, params_t *) = get_specifier(s);
@@ -62,6 +66,7 @@ int get_print_func(char *s, va_list ap, params_t *params)
  *
  * Return: if flag was valid
  */
+
 int get_flag(char *s, params_t *params)
 {
 	int i = 0;
@@ -111,15 +116,17 @@ int get_modifier(char *s, params_t *params)
 }
 
 /**
- * get_width - gets the width from the format string
+ * get_width - take the width from the format string
  * @s: the format string
- * @params: the parameters struct
- * @ap: the argument pointer
+ * @params: The parameters struct
+ * @ap: argument pointer
  *
  * Return: new pointer
  */
+
 char *get_width(char *s, params_t *params, va_list ap)
 {
+
 	int d = 0;
 
 	if (*s == '*')
@@ -134,4 +141,5 @@ char *get_width(char *s, params_t *params, va_list ap)
 	}
 	params->width = d;
 	return (s);
+
 }

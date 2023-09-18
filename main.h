@@ -18,6 +18,7 @@
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
+
 /**
  * struct parameters - parameters struct
  *
@@ -32,10 +33,12 @@
  * @width: field width specified
  * @precision: field precision specified
  *
- * @h_modifier: on if h_modifier is specified
- * @l_modifier: on if l_modifier is specified
+ * @h_modifier: on in case h_modifier is specified
+ * @l_modifier: on in case l_modifier is specified
  *
  */
+
+
 typedef struct parameters
 {
 	unsigned int unsign			: 1;
@@ -54,11 +57,13 @@ typedef struct parameters
 } params_t;
 
 /**
- * struct specifier - Struct token
+ * struct specifier  - Struct token
  *
  * @specifier: format token
  * @f: The function associated
  */
+
+
 typedef struct specifier
 {
 	char *specifier;
@@ -113,7 +118,7 @@ void init_params(params_t *params, va_list ap);
 char *get_precision(char *p, params_t *params, va_list ap);
 
 /* _prinf.c module */
-int _printf(const char *format, ...);
+	int _printf(const char *format, ...);
 
 #endif
 

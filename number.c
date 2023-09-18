@@ -1,7 +1,8 @@
 #include "main.h"
 
+
 /**
- * convert - converter function, a clone of itoa
+ * convert - converter  function, a clone of itoa
  * @num: number
  * @base: base
  * @flags: argument flags
@@ -9,6 +10,8 @@
  *
  * Return: string
  */
+
+
 char *convert(long int num, int base, int flags, params_t *params)
 {
 	static char *array;
@@ -38,13 +41,16 @@ char *convert(long int num, int base, int flags, params_t *params)
 	return (ptr);
 }
 
+
 /**
  * print_unsigned - prints unsigned integer numbers
  * @ap: argument pointer
- * @params: the parameters struct
+ * @params: Thee parameters struct
  *
  * Return: bytes printed
  */
+
+
 int print_unsigned(va_list ap, params_t *params)
 {
 	unsigned long l;
@@ -68,8 +74,11 @@ int print_unsigned(va_list ap, params_t *params)
  *
  * Return: bytes printed
  */
+
+
 int print_address(va_list ap, params_t *params)
 {
+
 	unsigned long int n = va_arg(ap, unsigned long int);
 	char *str;
 
@@ -81,4 +90,5 @@ int print_address(va_list ap, params_t *params)
 	*--str = '0';
 	return (print_number(str, params));
 }
+
 

@@ -1,13 +1,17 @@
 #include "main.h"
 
+
 /**
  * _printf - prints anything
  * @format: the format string
  *
- * Return: number of bytes printed
+ * Return: number of the bytes printed
  */
+
+
 int _printf(const char *format, ...)
 {
+
 	int sum = 0;
 	va_list ap;
 	char *p, *start;
@@ -46,5 +50,6 @@ int _printf(const char *format, ...)
 	_putchar(BUF_FLUSH);
 	va_end(ap);
 	return (sum);
+
 }
 

@@ -1,14 +1,18 @@
 #include "main.h"
 
+
 /**
- * init_params - clears struct fields and reset buf
+ * init_params - clears struct fields and also reset buf
  * @params: the parameters struct
- * @ap: the argument pointer
+ * @ap: the argument  pointer
  *
  * Return: void
  */
+
+
 void init_params(params_t *params, va_list ap)
 {
+
 	params->unsign = 0;
 
 	params->plus_flag = 0;
@@ -23,4 +27,5 @@ void init_params(params_t *params, va_list ap)
 	params->h_modifier = 0;
 	params->l_modifier = 0;
 	(void)ap;
+
 }
